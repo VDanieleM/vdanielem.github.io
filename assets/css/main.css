@@ -2312,23 +2312,3 @@ input, select, textarea {
 			}
 
 		}
-
-/* Abilita lo scroll snap sul contenitore principale */
-html {
-    scroll-snap-type: y mandatory;
-    scroll-behavior: smooth;
-}
-
-/* Assicura che le sezioni mantengano l'altezza totale dello schermo senza collassare */
-section.fullscreen,
-section.main {
-    scroll-snap-align: start;
-    scroll-snap-stop: always;
-    box-sizing: border-box;
-}
-
-/* Fix specifico per evitare che la prima sezione o le sezioni scure si restringano */
-section.main.fullscreen {
-    min-height: 100vh !important;
-    height: 100vh !important;
-}
