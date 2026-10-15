@@ -66,7 +66,7 @@ input, select, textarea {
 	appearance: none;
 }
 
-/* Applica lo sfondo chiaro e la sfocatura a Intro e ai box di What I Do / Who I Am */
+/* 1. Stile base comune (sfondo chiaro, sfocatura, bordi e ombre) */
 #intro .content,
 #one .content.box,
 #two .content.box {
@@ -74,26 +74,33 @@ input, select, textarea {
     backdrop-filter: blur(12px) !important;                  /* Sfocatura dello sfondo sottostante */
     -webkit-backdrop-filter: blur(12px) !important;
     padding: 3em 3em !important;                             /* Respiro al testo interno */
-    border-radius: 16px !important;
     border: 1px solid rgba(255, 255, 255, 0.3) !important;   /* Bordo luminoso discreto */
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37) !important; /* Ombra morbida di stacco */
 }
 
-/* Gestione larghezza per Intro (Centrato) */
+/* 2. Gestione specifica per Intro (Centrato, angoli tutti arrotondati) */
 #intro .content {
+    border-radius: 16px !important;
     max-width: 90%;
     width: 1000px;
     margin: 0 auto;
 }
 
-/* Gestione larghezza e respiro per What I Do & Who I Am (Box Laterali) */
-#one .content.box,
-#two .content.box {
+/* 3. Gestione What I Do (A destra: arrotondato solo a sinistra) */
+#one .content.box {
+    border-radius: 16px 0 0 16px !important;
     max-width: 90%;
-    width: 650px; /* Ampiezza ideale per i box posizionati a destra/sinistra */
+    width: 650px;
 }
 
-/* Stile e leggibilità del testo su tutti e tre i box */
+/* 4. Gestione Who I Am (A sinistra: arrotondato solo a destra) */
+#two .content.box {
+    border-radius: 0 16px 16px 0 !important;
+    max-width: 90%;
+    width: 650px;
+}
+
+/* 5. Stile e leggibilità del testo su tutti e tre i box */
 #intro .content h2,
 #intro .content p,
 #one .content.box h2,
