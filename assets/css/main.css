@@ -66,16 +66,25 @@ input, select, textarea {
 	appearance: none;
 }
 
-/* Effetto sfocatura e contrasto per il testo di Intro */
+/* Effetto Frosted Glass Chiaro e Spazioso per Intro */
 #intro .content {
-    background: rgba(10, 12, 16, 0.45); /* Sfondo scuro semi-trasparente */
-    backdrop-filter: blur(8px);          /* Sfoca l'immagine di sfondo dietro al testo */
-    -webkit-backdrop-filter: blur(8px);
-    padding: 2.5em 2em;
-    border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.08); /* Sottile bordo per definire il box */
-    max-width: 800px;
+    background: rgba(255, 255, 255, 0.18);      /* Sfondo chiaro semi-trasparente */
+    backdrop-filter: blur(12px);                  /* Sfocatura dello sfondo sottostante */
+    -webkit-backdrop-filter: blur(12px);
+    padding: 3em 3em;                             /* Più respiro al testo interno */
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.3);   /* Bordo luminoso discreto */
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37); /* Ombra morbida per staccarlo dallo sfondo */
+    max-width: 90%;                               /* Sfrutta quasi tutta la larghezza visibile */
+    width: 1000px;                                /* Limite massimo ampio per non comprimere */
     margin: 0 auto;
+}
+
+/* Assicura che il testo rimanga nitido e scuro/contrastato sul vetro chiaro */
+#intro .content h2,
+#intro .content p {
+    color: #ffffff;                               /* O #1a1a1a se lo sfondo chiaro risulta troppo luminoso */
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);    /* Sottile ombra scura sul testo per una leggibilità perfetta */
 }
 
 /* Basic */
