@@ -2315,22 +2315,26 @@ input, select, textarea {
 
 /* Styling Nav Menu - Hover & Active State */
 
-/* Transizione fluida su tutti i link del menu */
+/* Transizione fluida sui link del menu */
 #header nav ul li a {
     position: relative;
-    transition: color 0.3s ease, border-color 0.3s ease;
+    transition: color 0.3s ease, border-color 0.3s ease, opacity 0.3s ease;
     padding-bottom: 4px;
+    border-bottom: 2px solid transparent; /* Mantiene lo spazio per la linea evitando scatti */
 }
 
 /* Effetto al passaggio del mouse (Hover) */
 #header nav ul li a:hover {
-    color: #ffffff !important; /* Colore più brillante */
-    border-bottom: 2px solid rgba(255, 255, 255, 0.6); /* Sottolineatura discreta in trasparenza */
+    color: inherit !important; /* Mantiene il colore corretto (chiaro/scuro) a seconda della sezione */
+    opacity: 0.6; /* Effetto dissolvenza elegante al passaggio del mouse */
+    border-bottom: 2px solid currentColor; /* Usa il colore corrente del testo per la linea */
 }
 
-/* Stato della sezione attiva durante lo scroll (Active) */
-#header nav ul li a.active {
-    color: #ffffff !important;
-    font-weight: 900; /* Tipografia più marcata */
-    border-bottom: 2px solid #98c593; /* Linea di accento con il colore primario */
+/* Stato della sezione attiva durante lo scroll (Active su <a> o su <li>) */
+#header nav ul li a.active,
+#header nav ul li.active a {
+    color: inherit !important;
+    font-weight: 900; /* Tipografia più marcata per la sezione attiva */
+    opacity: 1 !important;
+    border-bottom: 2px solid #98c593 !important; /* Linea di accento verde visibile */
 }
