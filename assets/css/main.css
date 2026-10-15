@@ -2313,15 +2313,22 @@ input, select, textarea {
 
 		}
 
-/* 1. Abilita lo Scroll Snap sul contenitore principale (la pagina) */
+/* Abilita lo scroll snap sul contenitore principale */
 html {
-    scroll-snap-type: y mandatory; /* Forza l'aggancio verticale obbligatorio */
-    scroll-behavior: smooth;      /* Rende lo scorrimento fluido */
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
 }
 
-/* 2. Imposta l'aggancio al centro/inizio per tutte le sezioni fullscreen */
+/* Assicura che le sezioni mantengano l'altezza totale dello schermo senza collassare */
 section.fullscreen,
 section.main {
-    scroll-snap-align: start;     /* Allinea l'inizio della sezione con la schermata */
-    scroll-snap-stop: always;      /* Impedisce di saltare sezioni con uno scroll troppo veloce */
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    box-sizing: border-box;
+}
+
+/* Fix specifico per evitare che la prima sezione o le sezioni scure si restringano */
+section.main.fullscreen {
+    min-height: 100vh !important;
+    height: 100vh !important;
 }
