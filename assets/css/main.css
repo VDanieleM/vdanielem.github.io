@@ -66,24 +66,42 @@ input, select, textarea {
 	appearance: none;
 }
 
-/* Effetto Frosted Glass Chiaro e Spazioso per Intro */
+/* Applica lo sfondo chiaro e la sfocatura a Intro e ai box di What I Do / Who I Am */
+#intro .content,
+#one .content.box,
+#two .content.box {
+    background: rgba(255, 255, 255, 0.18) !important;      /* Sfondo chiaro semi-trasparente */
+    backdrop-filter: blur(12px) !important;                  /* Sfocatura dello sfondo sottostante */
+    -webkit-backdrop-filter: blur(12px) !important;
+    padding: 3em 3em !important;                             /* Respiro al testo interno */
+    border-radius: 16px !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;   /* Bordo luminoso discreto */
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37) !important; /* Ombra morbida di stacco */
+}
+
+/* Gestione larghezza per Intro (Centrato) */
 #intro .content {
-    background: rgba(255, 255, 255, 0.18);      /* Sfondo chiaro semi-trasparente */
-    backdrop-filter: blur(12px);                  /* Sfocatura dello sfondo sottostante */
-    -webkit-backdrop-filter: blur(12px);
-    padding: 3em 3em;                             /* Più respiro al testo interno */
-    border-radius: 16px;
-    border: 1px solid rgba(255, 255, 255, 0.3);   /* Bordo luminoso discreto */
-    max-width: 90%;                               /* Sfrutta quasi tutta la larghezza visibile */
-    width: 1000px;                                /* Limite massimo ampio per non comprimere */
+    max-width: 90%;
+    width: 1000px;
     margin: 0 auto;
 }
 
-/* Assicura che il testo rimanga nitido e scuro/contrastato sul vetro chiaro */
+/* Gestione larghezza e respiro per What I Do & Who I Am (Box Laterali) */
+#one .content.box,
+#two .content.box {
+    max-width: 90%;
+    width: 650px; /* Ampiezza ideale per i box posizionati a destra/sinistra */
+}
+
+/* Stile e leggibilità del testo su tutti e tre i box */
 #intro .content h2,
-#intro .content p {
-    color: #ffffff;                               /* O #1a1a1a se lo sfondo chiaro risulta troppo luminoso */
-    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);    /* Sottile ombra scura sul testo per una leggibilità perfetta */
+#intro .content p,
+#one .content.box h2,
+#one .content.box p,
+#two .content.box h2,
+#two .content.box p {
+    color: #ffffff !important;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6) !important;    /* Ombra scura per massimo contrasto */
 }
 
 /* Basic */
