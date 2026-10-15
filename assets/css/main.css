@@ -66,6 +66,18 @@ input, select, textarea {
 	appearance: none;
 }
 
+/* Effetto sfocatura e contrasto per il testo di Intro */
+#intro .content {
+    background: rgba(10, 12, 16, 0.45); /* Sfondo scuro semi-trasparente */
+    backdrop-filter: blur(8px);          /* Sfoca l'immagine di sfondo dietro al testo */
+    -webkit-backdrop-filter: blur(8px);
+    padding: 2.5em 2em;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.08); /* Sottile bordo per definire il box */
+    max-width: 800px;
+    margin: 0 auto;
+}
+
 /* Basic */
 
 	@-ms-viewport {
