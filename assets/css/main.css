@@ -74,7 +74,6 @@ input, select, textarea {
     padding: 3em 3em;                             /* Più respiro al testo interno */
     border-radius: 16px;
     border: 1px solid rgba(255, 255, 255, 0.3);   /* Bordo luminoso discreto */
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37); /* Ombra morbida per staccarlo dallo sfondo */
     max-width: 90%;                               /* Sfrutta quasi tutta la larghezza visibile */
     width: 1000px;                                /* Limite massimo ampio per non comprimere */
     margin: 0 auto;
