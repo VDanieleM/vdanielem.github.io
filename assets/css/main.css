@@ -477,8 +477,8 @@ input, select, textarea {
 			font-style: normal;
 			font-weight: normal;
 			text-transform: none !important;
-			color: #e5e6e7;
-			content: '\f1ce';
+			color: #ffffff;
+			content: '\f021';
 			cursor: default;
 			display: block;
 			font-size: 2em;
@@ -499,7 +499,7 @@ input, select, textarea {
 			-webkit-animation: overlay-hide 1.5s ease-in forwards !important;
 			-ms-animation: overlay-hide 1.5s ease-in forwards !important;
 			animation: overlay-hide 1.5s ease-in forwards !important;
-			background: #ffffff;
+			background: #111111;
 			content: '';
 			display: block;
 			height: 100%;
