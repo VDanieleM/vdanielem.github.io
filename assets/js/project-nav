@@ -1,0 +1,38 @@
+document.addEventListener('DOMContentLoaded', () => {
+    // 1. Definisci l'ordine dei tuoi progetti (usa i nomi esatti dei file HTML)
+    const projects = [
+        { file: 'projectkorumana.html', title: 'Koru Mana' },
+        { file: 'medianorba.html', title: 'Medi@norba' },
+        { file: 'projectThree.html', title: 'Project 03' },
+        { file: 'projectFour.html', title: 'Project 04' },
+        { file: 'projectFive.html', title: 'Project 05' },
+        { file: 'projectSix.html', title: 'Project 06' }
+    ];
+
+    // 2. Ricava il nome del file corrente dall'URL
+    const currentPath = window.location.pathname;
+    const currentFile = currentPath.substring(currentPath.lastIndexOf('/') + 1);
+
+    // 3. Trova la posizione del progetto corrente nella lista
+    const currentIndex = projects.findIndex(p => p.file.toLowerCase() === currentFile.toLowerCase());
+
+    if (currentIndex === -1) return; // Se la pagina non è nella lista, non fare nulla
+
+    // 4. Calcola precedente e successivo (con navigazione circolare / a loop)
+    const prevIndex = (currentIndex - 1 + projects.length) % projects.length;
+    const nextIndex = (currentIndex + 1) % projects.length;
+
+    // 5. Assegna gli href e i title ai pulsanti
+    const prevBtn = document.querySelector('.btn-circle.prev');
+    const nextBtn = document.querySelector('.btn-circle.next');
+
+    if (prevBtn) {
+        prevBtn.href = projects[prevIndex].file;
+        prevBtn.setAttribute('title', `Precedente: ${projects[prevIndex].title}`);
+    }
+
+    if (nextBtn) {
+        nextBtn.href = projects[nextIndex].file;
+        nextBtn.setAttribute('title', `Successivo: ${projects[nextIndex].title}`);
+    }
+});
