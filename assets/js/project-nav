@@ -1,38 +1,41 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Definisci l'ordine dei tuoi progetti (usa i nomi esatti dei file HTML)
+    // 1. Nomi esatti dei file presenti dentro la cartella /projects/
     const projects = [
         { file: 'projectkorumana.html', title: 'Koru Mana' },
-        { file: 'projectmedianorba.html', title: 'Medi@norba' },
-        { file: 'projectThree.html', title: 'Project 03' },
-        { file: 'projectFour.html', title: 'Project 04' },
-        { file: 'projectFive.html', title: 'Project 05' },
-        { file: 'projectSix.html', title: 'Project 06' }
+        { file: 'projectmedianorba.html', title: 'Medi@norba' }
+        // Aggiungi qui gli altri progetti man mano che crei i file
     ];
 
-    // 2. Ricava il nome del file corrente dall'URL
-    const currentPath = window.location.pathname;
-    const currentFile = currentPath.substring(currentPath.lastIndexOf('/') + 1);
+    // 2. Estrazione sicura del file corrente dall'URL
+    const pathParts = window.location.pathname.split('/');
+    const currentFile = pathParts[pathParts.length - 1].toLowerCase();
 
-    // 3. Trova la posizione del progetto corrente nella lista
-    const currentIndex = projects.findIndex(p => p.file.toLowerCase() === currentFile.toLowerCase());
+    console.log('[Nav] File rilevato nella pagina:', currentFile);
 
-    if (currentIndex === -1) return; // Se la pagina non è nella lista, non fare nulla
+    // 3. Ricerca nell'indice
+    const currentIndex = projects.findIndex(p => p.file.toLowerCase() === currentFile);
 
-    // 4. Calcola precedente e successivo (con navigazione circolare / a loop)
+    if (currentIndex === -1) {
+        console.warn('[Nav] Il file corrente non è presente nella lista projects:', currentFile);
+        return;
+    }
+
+    // 4. Calcolo progetti precedente e successivo
     const prevIndex = (currentIndex - 1 + projects.length) % projects.length;
     const nextIndex = (currentIndex + 1) % projects.length;
 
-    // 5. Assegna gli href e i title ai pulsanti
     const prevBtn = document.querySelector('.btn-circle.prev');
     const nextBtn = document.querySelector('.btn-circle.next');
 
     if (prevBtn) {
         prevBtn.href = projects[prevIndex].file;
         prevBtn.setAttribute('title', `Precedente: ${projects[prevIndex].title}`);
+        console.log('[Nav] Tasto Precedente impostato a:', projects[prevIndex].file);
     }
 
     if (nextBtn) {
         nextBtn.href = projects[nextIndex].file;
         nextBtn.setAttribute('title', `Successivo: ${projects[nextIndex].title}`);
+        console.log('[Nav] Tasto Successivo impostato a:', projects[nextIndex].file);
     }
 });
