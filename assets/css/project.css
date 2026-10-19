@@ -1,0 +1,201 @@
+/* ==========================================================================
+   PAGE SINGLE PROJECT — LAYOUT FOCUS DINAMICO & FROSTED GLASS
+   ========================================================================== */
+
+/* Spaziatura e struttura della pagina */
+#project-detail {
+    padding-top: 6em;
+    padding-bottom: 4em;
+}
+
+#project-detail .content {
+    max-width: 1100px;
+    margin: 0 auto;
+    width: 90%;
+}
+
+/* Intestazione del progetto */
+.project-header {
+    text-align: left;
+    margin-bottom: 2.5em;
+}
+
+.project-category {
+    display: inline-block;
+    font-size: 0.85em;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 0.5em;
+}
+
+.project-header h2 {
+    font-size: 2.8em !important;
+    font-weight: 300 !important;
+    color: #ffffff !important;
+    margin-bottom: 0.4em !important;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5) !important;
+}
+
+.project-lead {
+    font-size: 1.25em !important;
+    line-height: 1.6em !important;
+    color: rgba(255, 255, 255, 0.9) !important;
+    max-width: 800px;
+}
+
+/* Hero Box e Immagine Principale */
+.project-hero-box {
+    background: rgba(255, 255, 255, 0.12) !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.25) !important;
+    border-radius: 16px !important;
+    padding: 0.8em !important;
+    margin-bottom: 2em !important;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35) !important;
+    overflow: hidden;
+}
+
+.project-hero-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+}
+
+/* Scheda Info Dettagli Progetto (3 colonne) */
+.project-info-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5em;
+    background: rgba(255, 255, 255, 0.15) !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.25) !important;
+    border-radius: 16px !important;
+    padding: 2em !important;
+    margin-bottom: 2.5em !important;
+}
+
+.info-item h3 {
+    font-size: 0.9em !important;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: rgba(255, 255, 255, 0.6) !important;
+    margin-bottom: 0.3em !important;
+}
+
+.info-item p {
+    font-size: 1.05em !important;
+    font-weight: 400 !important;
+    color: #ffffff !important;
+    margin: 0 !important;
+}
+
+/* ==========================================================================
+   GRIGLIA ASIMMETRICA (FOCUS DINAMICO)
+   ========================================================================== */
+
+.project-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 1.5em;
+    margin-bottom: 3em;
+}
+
+/* Base comune per le card della galleria */
+.gallery-item {
+    background: rgba(255, 255, 255, 0.12) !important;
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    border-radius: 16px !important;
+    padding: 0.8em !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25) !important;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: translateY(-4px);
+    background: rgba(255, 255, 255, 0.18) !important;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+}
+
+.gallery-item .caption {
+    font-size: 0.85em;
+    color: rgba(255, 255, 255, 0.75);
+    margin-top: 0.8em;
+    padding: 0 0.4em 0.2em 0.4em;
+}
+
+/* Dimensioni Asimmetriche della Griglia */
+.item-large {
+    grid-column: span 8; /* 2/3 della larghezza */
+}
+
+.item-tall {
+    grid-column: span 4; /* 1/3 della larghezza */
+}
+
+.item-medium {
+    grid-column: span 6; /* 1/2 della larghezza */
+}
+
+/* Navigazione Footer del Progetto */
+.project-footer-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 4em;
+    padding-top: 2em;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* ==========================================================================
+   RESPONSIVE MOBILE BREAKPOINTS
+   ========================================================================== */
+
+@media screen and (max-width: 980px) {
+    .project-gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .item-large,
+    .item-tall,
+    .item-medium {
+        grid-column: span 1;
+    }
+
+    .project-info-grid {
+        grid-template-columns: 1fr;
+        gap: 1em;
+    }
+}
+
+@media screen and (max-width: 736px) {
+    .project-header h2 {
+        font-size: 2.1em !important;
+    }
+
+    .project-footer-nav {
+        flex-direction: column;
+        gap: 1em;
+    }
+
+    .project-footer-nav .button {
+        width: 100%;
+        text-align: center;
+    }
+}
