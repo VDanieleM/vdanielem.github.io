@@ -148,70 +148,27 @@ input, select, textarea {
 
 /* Spinner */
 
-	@-moz-keyframes spinner-rotate {
-		0% {
-			-moz-transform: scale(1) rotate(0deg);
-			-webkit-transform: scale(1) rotate(0deg);
-			-ms-transform: scale(1) rotate(0deg);
-			transform: scale(1) rotate(0deg);
-		}
-
-		100% {
-			-moz-transform: scale(1) rotate(360deg);
-			-webkit-transform: scale(1) rotate(360deg);
-			-ms-transform: scale(1) rotate(360deg);
-			transform: scale(1) rotate(360deg);
-		}
-	}
-
-	@-webkit-keyframes spinner-rotate {
-		0% {
-			-moz-transform: scale(1) rotate(0deg);
-			-webkit-transform: scale(1) rotate(0deg);
-			-ms-transform: scale(1) rotate(0deg);
-			transform: scale(1) rotate(0deg);
-		}
-
-		100% {
-			-moz-transform: scale(1) rotate(360deg);
-			-webkit-transform: scale(1) rotate(360deg);
-			-ms-transform: scale(1) rotate(360deg);
-			transform: scale(1) rotate(360deg);
-		}
-	}
-
-	@-ms-keyframes spinner-rotate {
-		0% {
-			-moz-transform: scale(1) rotate(0deg);
-			-webkit-transform: scale(1) rotate(0deg);
-			-ms-transform: scale(1) rotate(0deg);
-			transform: scale(1) rotate(0deg);
-		}
-
-		100% {
-			-moz-transform: scale(1) rotate(360deg);
-			-webkit-transform: scale(1) rotate(360deg);
-			-ms-transform: scale(1) rotate(360deg);
-			transform: scale(1) rotate(360deg);
-		}
-	}
-
-	@keyframes spinner-rotate {
-		0% {
-			-moz-transform: scale(1) rotate(0deg);
-			-webkit-transform: scale(1) rotate(0deg);
-			-ms-transform: scale(1) rotate(0deg);
-			transform: scale(1) rotate(0deg);
-		}
-
-		100% {
-			-moz-transform: scale(1) rotate(360deg);
-			-webkit-transform: scale(1) rotate(360deg);
-			-ms-transform: scale(1) rotate(360deg);
-			transform: scale(1) rotate(360deg);
-		}
-	}
-
+@keyframes frog-hop {
+    0%, 100% {
+        transform: translateY(0) scale(1, 1);
+    }
+    15% {
+        /* Flessione prima dello slancio */
+        transform: translateY(2px) scale(1.15, 0.85);
+    }
+    45% {
+        /* Punto massimo del salto in alto */
+        transform: translateY(-24px) scale(0.9, 1.1);
+    }
+    70% {
+        /* Ritorno a terra */
+        transform: translateY(0) scale(1, 1);
+    }
+    80% {
+        /* Atterraggio e ammortizzamento */
+        transform: translateY(2px) scale(1.1, 0.9);
+    }
+}
 /* Loader */
 
 	@-moz-keyframes spinner-show {
@@ -511,13 +468,13 @@ font-family: 'Font Awesome 5 Free', 'FontAwesome';
 			z-index: -1;
 		}
 
-		body.is-preload:before {
-			-moz-animation: spinner-show 1.5s 1 0.25s ease forwards, spinner-rotate 0.75s infinite linear !important;
-			-webkit-animation: spinner-show 1.5s 1 0.25s ease forwards, spinner-rotate 0.75s infinite linear !important;
-			-ms-animation: spinner-show 1.5s 1 0.25s ease forwards, spinner-rotate 0.75s infinite linear !important;
-			animation: spinner-show 1.5s 1 0.25s ease forwards, spinner-rotate 0.75s infinite linear !important;
-			z-index: 100001;
-		}
+body.is-preload:before {
+    -moz-animation: spinner-show 1.5s 1 0.25s ease forwards, frog-hop 0.8s infinite ease !important;
+    -webkit-animation: spinner-show 1.5s 1 0.25s ease forwards, frog-hop 0.8s infinite ease !important;
+    -ms-animation: spinner-show 1.5s 1 0.25s ease forwards, frog-hop 0.8s infinite ease !important;
+    animation: spinner-show 1.5s 1 0.25s ease forwards, frog-hop 0.8s infinite ease !important;
+    z-index: 100001;
+}
 
 		body.is-preload:after {
 			-moz-animation: none !important;
