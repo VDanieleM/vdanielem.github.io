@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // 1. Definisci l'ordine dei tuoi progetti (usa i nomi esatti dei file HTML)
     const projects = [
         { file: 'projectkorumana.html', title: 'Koru Mana' },
-        { file: 'medianorba.html', title: 'Medi@norba' },
+        { file: 'projectmedianorba.html', title: 'Medi@norba' },
         { file: 'projectThree.html', title: 'Project 03' },
         { file: 'projectFour.html', title: 'Project 04' },
         { file: 'projectFive.html', title: 'Project 05' },
