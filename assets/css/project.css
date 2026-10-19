@@ -2,25 +2,24 @@
    PAGE SINGLE PROJECT — LAYOUT FOCUS DINAMICO & FROSTED GLASS
    ========================================================================== */
 
-
-
 /* Spaziatura e struttura della pagina */
 #project-detail {
-   background-color: #1e1e24;
-    padding-top: 6em;
-    padding-bottom: 4em;
+    background-color: #121316;
+    padding-top: 5em;
+    padding-bottom: 5em;
 }
 
 #project-detail .content {
-    max-width: 1100px;
+    max-width: 1200px;
     margin: 0 auto;
     width: 90%;
 }
 
 /* Intestazione del progetto */
 .project-header {
-    text-align: left;
-    margin-bottom: 2.5em;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 3em auto;
 }
 
 .project-category {
@@ -29,12 +28,12 @@
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.15em;
-    color: rgba(255, 255, 255, 0.7);
-    margin-bottom: 0.5em;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 0.6em;
 }
 
 .project-header h2 {
-    font-size: 2.8em !important;
+    font-size: 3em !important;
     font-weight: 300 !important;
     color: #ffffff !important;
     margin-bottom: 0.4em !important;
@@ -44,28 +43,31 @@
 .project-lead {
     font-size: 1.25em !important;
     line-height: 1.6em !important;
-    color: rgba(255, 255, 255, 0.9) !important;
-    max-width: 800px;
+    color: rgba(255, 255, 255, 0.85) !important;
+    margin: 0 auto;
 }
 
 /* Hero Box e Immagine Principale */
+.project-hero,
 .project-hero-box {
-    background: rgba(255, 255, 255, 0.12) !important;
+    background: rgba(255, 255, 255, 0.08) !important;
     backdrop-filter: blur(12px) !important;
     -webkit-backdrop-filter: blur(12px) !important;
-    border: 1px solid rgba(255, 255, 255, 0.25) !important;
+    border: 1px solid rgba(255, 255, 255, 0.18) !important;
     border-radius: 16px !important;
     padding: 0.8em !important;
-    margin-bottom: 2em !important;
+    margin-bottom: 2.5em !important;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35) !important;
     overflow: hidden;
 }
 
+.project-hero img,
 .project-hero-img {
     width: 100%;
     height: auto;
     display: block;
     border-radius: 10px;
+    object-fit: cover;
 }
 
 /* Scheda Info Dettagli Progetto (3 colonne) */
@@ -73,21 +75,21 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1.5em;
-    background: rgba(255, 255, 255, 0.15) !important;
+    background: rgba(255, 255, 255, 0.08) !important;
     backdrop-filter: blur(12px) !important;
     -webkit-backdrop-filter: blur(12px) !important;
-    border: 1px solid rgba(255, 255, 255, 0.25) !important;
+    border: 1px solid rgba(255, 255, 255, 0.18) !important;
     border-radius: 16px !important;
     padding: 2em !important;
-    margin-bottom: 2.5em !important;
+    margin-bottom: 3em !important;
 }
 
 .info-item h3 {
-    font-size: 0.9em !important;
+    font-size: 0.85em !important;
     text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: rgba(255, 255, 255, 0.6) !important;
-    margin-bottom: 0.3em !important;
+    letter-spacing: 0.12em;
+    color: rgba(255, 255, 255, 0.5) !important;
+    margin-bottom: 0.4em !important;
 }
 
 .info-item p {
@@ -98,9 +100,32 @@
 }
 
 /* ==========================================================================
-   GRIGLIA ASIMMETRICA (FOCUS DINAMICO)
+   GRIGLIA ASIMMETRICA (FOCUS DINAMICO / FLEX & GRID)
    ========================================================================== */
 
+/* Struttura Flex a Righe Asimmetriche */
+.project-gallery-asymmetric {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5em;
+    margin-bottom: 3.5em;
+}
+
+.gallery-row {
+    display: flex;
+    gap: 2.5em;
+    width: 100%;
+}
+
+.row-2-1 .item-main { flex: 2; }
+.row-2-1 .item-side { flex: 1; }
+
+.row-full .gallery-item { flex: 1; }
+
+.row-1-2 .item-side { flex: 1; }
+.row-1-2 .item-main { flex: 2; }
+
+/* Griglia Asimmetrica CSS Grid a 12 Colonne (Versione Classica) */
 .project-gallery-grid {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -108,24 +133,25 @@
     margin-bottom: 3em;
 }
 
-/* Base comune per le card della galleria */
+/* Base comune per le card della galleria in Frosted Glass */
 .gallery-item {
-    background: rgba(255, 255, 255, 0.12) !important;
+    background: rgba(255, 255, 255, 0.08) !important;
     backdrop-filter: blur(10px) !important;
     -webkit-backdrop-filter: blur(10px) !important;
-    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
     border-radius: 16px !important;
     padding: 0.8em !important;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25) !important;
-    transition: transform 0.3s ease, background 0.3s ease;
+    transition: transform 0.3s ease, background 0.3s ease, border-color 0.3s ease;
 }
 
 .gallery-item:hover {
     transform: translateY(-4px);
-    background: rgba(255, 255, 255, 0.18) !important;
+    background: rgba(255, 255, 255, 0.14) !important;
+    border-color: rgba(255, 255, 255, 0.3) !important;
 }
 
 .gallery-item img {
@@ -143,7 +169,7 @@
     padding: 0 0.4em 0.2em 0.4em;
 }
 
-/* Dimensioni Asimmetriche della Griglia */
+/* Dimensioni Asimmetriche della Griglia (Grid System) */
 .item-large {
     grid-column: span 8; /* 2/3 della larghezza */
 }
@@ -156,6 +182,19 @@
     grid-column: span 6; /* 1/2 della larghezza */
 }
 
+/* Citazione / Breakpoint Testuale Discreto */
+.project-insight {
+    text-align: center;
+    padding: 2.5em 1em;
+    font-style: italic;
+    font-size: 1.25em;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.85);
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    margin: 1em 0;
+}
+
 /* Navigazione Footer del Progetto */
 .project-footer-nav {
     display: flex;
@@ -163,7 +202,7 @@
     align-items: center;
     margin-top: 4em;
     padding-top: 2em;
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 /* ==========================================================================
@@ -171,6 +210,11 @@
    ========================================================================== */
 
 @media screen and (max-width: 980px) {
+    .gallery-row {
+        flex-direction: column;
+        gap: 1.5em;
+    }
+
     .project-gallery-grid {
         grid-template-columns: 1fr;
     }
@@ -183,13 +227,22 @@
 
     .project-info-grid {
         grid-template-columns: 1fr;
-        gap: 1em;
+        gap: 1.2em;
     }
 }
 
 @media screen and (max-width: 736px) {
+    #project-detail {
+        padding-top: 3.5em;
+        padding-bottom: 3.5em;
+    }
+
     .project-header h2 {
         font-size: 2.1em !important;
+    }
+
+    .project-lead {
+        font-size: 1.1em !important;
     }
 
     .project-footer-nav {
