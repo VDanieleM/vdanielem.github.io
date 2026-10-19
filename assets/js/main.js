@@ -82,6 +82,7 @@
 			var $gallery = $('.gallery');
 
 			$gallery.poptrox({
+				selector: 'a:not([data-poptrox="ignore"])', // Ignora i link verso le pagine di progetto HTML
 				baseZIndex: 10001,
 				useBodyOverflow: false,
 				usePopupEasyClose: false,
