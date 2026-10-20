@@ -107,7 +107,7 @@ input, select, textarea {
 #one .content.box p,
 #two .content.box h2,
 #two .content.box p {
-    color: #ffffff !important;
+    color: #39454b !important;
     text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6) !important;    /* Ombra scura per massimo contrasto */
 }
 
@@ -130,7 +130,7 @@ input, select, textarea {
 	}
 
 	body {
-		background: #ffffff;
+		background: #39454b;
 		height: 100%;
 		min-width: 320px;
 	}
@@ -1016,7 +1016,7 @@ content: '\f021';
 			position: absolute;
 			bottom: 0;
 			left: 0;
-			background: #ffffff;
+			background: #39454b;
 			width: 100%;
 			height: 3em;
 			line-height: 2.8em;
@@ -1797,7 +1797,7 @@ color: #ffffff;
 			}
 
 			.main.style3.primary {
-				background: #ffffff;
+				background: #39454b;
 			}
 
 			.main.style3.secondary {
@@ -1805,7 +1805,7 @@ color: #ffffff;
 			}
 
 		.main.dark {
-			color: #ffffff;
+			color: #39454b;
 		}
 
 			.main.dark a {
