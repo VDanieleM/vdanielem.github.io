@@ -456,7 +456,7 @@ font-family: 'Font Awesome 5 Free', 'FontAwesome';
 			-webkit-animation: overlay-hide 1.5s ease-in forwards !important;
 			-ms-animation: overlay-hide 1.5s ease-in forwards !important;
 			animation: overlay-hide 1.5s ease-in forwards !important;
-			background: #111111;
+			background: #16191b;
 			content: '';
 			display: block;
 			height: 100%;
