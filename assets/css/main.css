@@ -1301,6 +1301,22 @@ content: '\f021';
 			opacity: 1.0;
 		}
 
+.gallery article a.image,
+.gallery article a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.gallery article img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
 			.gallery article .image {
 				margin: 0;
 				display: block;
