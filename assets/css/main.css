@@ -737,7 +737,7 @@ body.is-preload:before {
         background: rgba(255, 255, 255, 0.85);
         backdrop-filter: blur(8px);
         -webkit-backdrop-filter: blur(8px);
-        color: #39454b;
+        color: #ffffff;
         padding: 2em;
         border-radius: 4px;
     }
