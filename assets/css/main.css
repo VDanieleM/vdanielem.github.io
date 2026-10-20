@@ -107,7 +107,7 @@ input, select, textarea {
 #one .content.box p,
 #two .content.box h2,
 #two .content.box p {
-    color: #ffffff
+    color: #ffffff;
     text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6) !important;    /* Ombra scura per massimo contrasto */
 }
 
