@@ -1993,6 +1993,11 @@ color: #ffffff;
     #intro a.button.down {
         display: none !important;
     }
+
+	#intro footer,
+    #intro .button {
+        display: none !important;
+    }
 }
 
 		@media screen and (max-width: 736px) {
