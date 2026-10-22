@@ -2370,7 +2370,7 @@ a.button.down {
 }
 
 #contact .contact-card.whatsapp:hover {
-    border-color: #25d366;
+    border-color: #93c3c7;
     background: #f1faf3;
     transform: translateY(-2px);
     box-shadow: 0 6px 16px rgba(37, 211, 102, 0.15);
@@ -2383,7 +2383,7 @@ a.button.down {
 }
 
 #contact .contact-card.email:hover {
-    border-color: #98c593;
+    border-color: #93c3c7;
     background: #f4f8f4;
     transform: translateY(-2px);
     box-shadow: 0 6px 16px rgba(152, 197, 147, 0.2);
