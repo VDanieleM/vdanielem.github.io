@@ -1988,6 +1988,13 @@ color: #ffffff;
 
 }
 
+@media screen and (max-width: 736px) {
+    #intro footer,
+    #intro a.button.down {
+        display: none !important;
+    }
+}
+
 		@media screen and (max-width: 736px) {
 
 			.main > .content br {
