@@ -2255,3 +2255,159 @@ a.button.down {
     height: 100%;
     object-fit: cover;             /* Mantiene le proporzioni del ritratto senza deformarlo */
 }
+
+/* ==========================================================================
+   Sezione Contatti: Layout a 2 Colonne e Card Canali
+   ========================================================================== */
+
+/* 1. Griglia a 2 colonne per il box contatti */
+#contact .contact-wrapper {
+    background: #ffffff;
+    padding: 3rem;
+    color: #39454b;
+}
+
+#contact .grid-2-col {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+}
+
+#contact .contact-image {
+    flex: 1 1 45%;
+    max-width: 45%;
+}
+
+#contact .contact-details {
+    flex: 1 1 55%;
+    text-align: left;
+}
+
+/* 2. Titolo del gruppo canali */
+#contact .contact-details h3 {
+    color: #2e383d;
+    font-size: 1.45em;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.02em;
+}
+
+/* 3. Azzeramento lista contatti */
+#contact .contact-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+#contact .contact-list li {
+    padding: 0;
+    margin: 0;
+}
+
+/* 4. Design delle Card Cliccabili (WhatsApp ed Email) */
+#contact .contact-card {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    padding: 1.25rem 1.5rem;
+    background: #f7f9fa;
+    border: 1px solid #e1e6e9;
+    border-radius: 12px;
+    text-decoration: none;
+    color: #39454b;
+    transition: all 0.25s ease-in-out;
+}
+
+/* Icona rotonda a contrasto */
+#contact .contact-card i.icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    min-width: 3rem;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    transition: transform 0.25s ease;
+}
+
+/* Testi della card: Titolo e Descrizione */
+#contact .contact-card div {
+    display: flex;
+    flex-direction: column;
+}
+
+#contact .contact-card strong {
+    font-size: 1.15em;
+    font-weight: 700;
+    color: #1e2529;
+    line-height: 1.2;
+    margin-bottom: 0.25rem;
+}
+
+#contact .contact-card span {
+    font-size: 0.9em;
+    color: #6a767d;
+    line-height: 1.35;
+}
+
+/* 5. Personalizzazione per canale & Effetto Hover */
+/* WhatsApp */
+#contact .contact-card.whatsapp i.icon {
+    background: #eaf7ee;
+    color: #25d366;
+}
+
+#contact .contact-card.whatsapp:hover {
+    border-color: #25d366;
+    background: #f1faf3;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(37, 211, 102, 0.15);
+}
+
+/* Email */
+#contact .contact-card.email i.icon {
+    background: #eaf1f7;
+    color: #39454b;
+}
+
+#contact .contact-card.email:hover {
+    border-color: #98c593;
+    background: #f4f8f4;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(152, 197, 147, 0.2);
+}
+
+#contact .contact-card:hover i.icon {
+    transform: scale(1.1);
+}
+
+/* 6. Ottimizzazione Responsive per Smartphone & Tablet */
+@media screen and (max-width: 840px) {
+    #contact .contact-wrapper {
+        padding: 1.75rem 1.25rem;
+    }
+
+    #contact .grid-2-col {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    #contact .contact-image,
+    #contact .contact-details {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    #contact .contact-details {
+        text-align: center;
+    }
+
+    #contact .contact-card {
+        text-align: left;
+        padding: 1rem 1.25rem;
+    }
+}
