@@ -2371,9 +2371,9 @@ a.button.down {
 
 #contact .contact-card.whatsapp:hover {
     border-color: #93c3c7;
-    background: #f1faf3;
+    background: #f1fafa;
     transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(37, 211, 102, 0.15);
+    box-shadow: 0 6px 16px rgba(147, 197, 197, 0.2);
 }
 
 /* Email */
@@ -2384,9 +2384,9 @@ a.button.down {
 
 #contact .contact-card.email:hover {
     border-color: #93c3c7;
-    background: #f4f8f4;
+    background: #f1fafa;
     transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(152, 197, 147, 0.2);
+    box-shadow: 0 6px 16px rgba(147, 197, 197, 0.2);
 }
 
 #contact .contact-card:hover i.icon {
