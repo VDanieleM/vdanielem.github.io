@@ -1949,29 +1949,35 @@ color: #ffffff;
 			background-attachment: scroll !important;
 		}
 
-		@media screen and (max-width: 1920px) {
+/* Schermi Desktop Standard e Grandi (Full HD, 2K, 4K) */
+@media screen and (max-width: 1920px) {
 
-			.main.style2 .content {
-				width: 40%;
-			}
+    .main.style2 .content {
+        width: 50%;
+        max-width: 50vw;
+    }
 
-		}
+}
 
-		@media screen and (max-width: 1280px) {
+/* Schermi Laptop / Desktop compatti */
+@media screen and (max-width: 1280px) {
 
-			.main.style2 .content {
-				width: 50%;
-			}
+    .main.style2 .content {
+        width: 55%;
+        max-width: 55vw;
+    }
 
-		}
+}
 
-		@media screen and (max-width: 1000px) {
+/* Tablet orizzontale */
+@media screen and (max-width: 1000px) {
 
-			.main.style2 .content {
-				width: 60%;
-			}
+    .main.style2 .content {
+        width: 70%;
+        max-width: 70vw;
+    }
 
-		}
+}
 
 		@media screen and (max-width: 736px) {
 
