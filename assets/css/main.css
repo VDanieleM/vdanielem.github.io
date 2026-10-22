@@ -2006,6 +2006,11 @@ color: #ffffff;
 					font-size: 3em;
 				}
 
+				.main.style1 footer,
+    .main.style1 .button {
+        display: none !important;
+    }
+
 			.main.style2 {
 				padding: 6em 15px 6em 15px;
 			}
