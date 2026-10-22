@@ -2443,7 +2443,7 @@ a.button.down {
     line-height: 3.2em;
     padding: 0 1.8em;
     background-color: transparent;
-    border: 2px solid #98c593;
+    border: 2px solid #5a7779;
     color: #ffffff;
     border-radius: 3em;
     display: inline-flex;
@@ -2454,12 +2454,12 @@ a.button.down {
 }
 
 #two .cv-button i.icon {
-    color: #98c593;
+    color: #5a7779;
     transition: color 0.25s ease-in-out;
 }
 
 #two .cv-button:hover {
-    background-color: #98c593;
+    background-color: #5a7779;
     color: #1e2529;
 }
 
