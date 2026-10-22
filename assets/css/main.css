@@ -2214,3 +2214,24 @@ a.button.down {
 			}
 
 		}
+
+		/* 1. Transizioni fluide su immagine e velatura */
+.gallery article .image:before {
+    transition: opacity 0.3s ease-in-out;
+    pointer-events: none; /* Permette il click diretto */
+    z-index: 2;
+}
+
+.gallery article img {
+    transition: transform 0.4s ease, filter 0.3s ease;
+}
+
+/* 2. Effetto al passaggio del mouse (Hover) */
+.gallery article:hover .image:before {
+    opacity: 0; /* Fa scomparire del tutto la patina sbiadita */
+}
+
+.gallery article:hover img {
+    transform: scale(1.04); /* Micro-zoom elegante */
+    filter: brightness(1.05); /* Ravviva la luminosità */
+}
