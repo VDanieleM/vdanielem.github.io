@@ -1989,6 +1989,14 @@ color: #ffffff;
 }
 
 @media screen and (max-width: 736px) {
+    #intro .content br {
+        display: block !important;
+        content: "";
+        margin-top: 0.8em;
+    }
+}
+
+@media screen and (max-width: 736px) {
 a.button.down {
         display: none !important;
     }
