@@ -2237,9 +2237,6 @@ a.button.down {
 }
 
 /* Smussatura angoli del box contatti */
-#contact {
-    border-radius: 16px 16px 0 0;
-}
 
 #contact .box.contact-wrapper {
     border-radius: 16px 16px 0 0 !important;
