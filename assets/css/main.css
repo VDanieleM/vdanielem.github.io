@@ -90,14 +90,14 @@ input, select, textarea {
 #one .content.box {
     border-radius: 16px 0 0 16px !important;
     max-width: 90%;
-width: 50vw;
+width: 50%;
 }
 
 /* 4. Gestione Who I Am (A sinistra: arrotondato solo a destra) */
 #two .content.box {
     border-radius: 0 16px 16px 0 !important;
     max-width: 90%;
-width: 50vw;
+width: 50%;
 }
 
 /* 5. Stile e leggibilità del testo su tutti e tre i box */
