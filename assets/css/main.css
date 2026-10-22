@@ -1989,13 +1989,7 @@ color: #ffffff;
 }
 
 @media screen and (max-width: 736px) {
-    #intro footer,
-    #intro a.button.down {
-        display: none !important;
-    }
-
-	#intro footer,
-    #intro .button {
+a.button.down {
         display: none !important;
     }
 }
