@@ -2235,3 +2235,19 @@ a.button.down {
     transform: scale(1.04); /* Micro-zoom elegante */
     filter: brightness(1.05); /* Ravviva la luminosità */
 }
+
+/* Smussatura angoli del box contatti */
+#contact .box.contact-wrapper {
+    border-radius: 16px !important;
+    overflow: hidden; /* Garantisce che nessun elemento interno sbordi dagli angoli */
+}
+
+/* Smussatura angoli della fotografia */
+#contact .portrait-img,
+#contact .contact-image img {
+    border-radius: 12px;           /* Arrotondamento degli angoli della foto */
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;             /* Mantiene le proporzioni del ritratto senza deformarlo */
+}
