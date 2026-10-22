@@ -2430,3 +2430,46 @@ a.button.down {
         padding: 1rem 1.25rem;
     }
 }
+
+/* Allineamento e stile del pulsante CV in Who I Am */
+#two .cv-action {
+    margin-top: 2rem;
+    text-align: left;
+}
+
+#two .cv-button {
+    font-size: 0.85em;
+    height: 3.2em;
+    line-height: 3.2em;
+    padding: 0 1.8em;
+    background-color: transparent;
+    border: 2px solid #98c593;
+    color: #ffffff;
+    border-radius: 3em;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6em;
+    text-decoration: none;
+    transition: all 0.25s ease-in-out;
+}
+
+#two .cv-button i.icon {
+    color: #98c593;
+    transition: color 0.25s ease-in-out;
+}
+
+#two .cv-button:hover {
+    background-color: #98c593;
+    color: #1e2529;
+}
+
+#two .cv-button:hover i.icon {
+    color: #1e2529;
+}
+
+/* Centratura su mobile */
+@media screen and (max-width: 736px) {
+    #two .cv-action {
+        text-align: center;
+    }
+}
