@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // 1. Nomi esatti dei file presenti dentro la cartella /projects/
     const projects = [
         { file: 'projectkorumana.html', title: 'Koru Mana' },
-        { file: 'projectmedianorba.html', title: 'Medi@norba' }
+        { file: 'projectmedianorba.html', title: 'Medianorba' }
         { file: 'projectmareterre.html', title: 'Mareterre' }
         { file: 'projectlaquercia.html', title: 'La Quercia Natura & Relax' }
         { file: 'projectclaudialiuzzi.html', title: 'Claudia Liuzzi' }
