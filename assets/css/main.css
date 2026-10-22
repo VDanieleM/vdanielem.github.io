@@ -2267,12 +2267,23 @@ a.button.down {
 #contact .grid-2-col {
     display: flex;
     gap: 3rem;
-    align-items: center;
+    align-items: stretch;
 }
 
 #contact .contact-image {
     flex: 1 1 45%;
     max-width: 45%;
+    display: flex;     
+}
+
+#contact .portrait-img,
+#contact .contact-image img {
+    border-radius: 16px;
+    display: block;
+    width: 100%;
+    height: 100%;        
+    object-fit: cover;    
+    object-position: center top; 
 }
 
 #contact .contact-details {
@@ -2388,12 +2399,23 @@ a.button.down {
         padding: 1.75rem 1.25rem;
     }
 
-    #contact .grid-2-col {
+#contact .grid-2-col {
         flex-direction: column;
-        gap: 2rem;
+        align-items: center;
     }
 
-    #contact .contact-image,
+#contact .contact-image {
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+    }
+
+	#contact .portrait-img,
+    #contact .contact-image img {
+        height: auto;
+        max-height: 360px;
+    }
+
     #contact .contact-details {
         max-width: 100%;
         width: 100%;
