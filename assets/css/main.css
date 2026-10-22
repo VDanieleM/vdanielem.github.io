@@ -89,15 +89,15 @@ input, select, textarea {
 /* 3. Gestione What I Do (A destra: arrotondato solo a sinistra) */
 #one .content.box {
     border-radius: 16px 0 0 16px !important;
-    max-width: 90%;
-width: 50%;
+    max-width: 90vw;
+width: 50vw;
 }
 
 /* 4. Gestione Who I Am (A sinistra: arrotondato solo a destra) */
 #two .content.box {
     border-radius: 0 16px 16px 0 !important;
-    max-width: 90%;
-width: 50%;
+    max-width: 90vw;
+width: 50vw;
 }
 
 /* 5. Stile e leggibilità del testo su tutti e tre i box */
@@ -652,6 +652,15 @@ body.is-preload:before {
 			}
 
 		}
+
+		@media screen and (max-width: 736px) {
+    #one .content.box,
+    #two .content.box {
+        width: 100% !important;
+        max-width: 100% !important;
+        border-radius: 16px !important;
+    }
+}
 
 		@media screen and (max-width: 736px) {
 
