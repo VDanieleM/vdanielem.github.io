@@ -1,7 +1,3 @@
-/*
-	Big Picture by HTML5 UP (Refactored for Daniele Maiellaro Portfolio)
-*/
-
 (function($) {
 
 	var	$window = $(window),
