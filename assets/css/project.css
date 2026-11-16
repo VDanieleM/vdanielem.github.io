@@ -340,9 +340,12 @@
         font-size: 1.1em !important;
     }
 
-    .project-footer-nav {
-        flex-direction: column;
-        gap: 1em;
+.project-footer-nav {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1.5em;
+        padding: 0 1rem;
     }
 
     .project-footer-nav .button {
