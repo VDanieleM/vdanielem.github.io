@@ -2260,15 +2260,16 @@ html {
 
 #header nav ul li a.nav-cta-btn {
     background: var(--accent-teal);
-    color: #0f1316 !important;
+    color: #ffffff !important;
     font-weight: 700;
     padding: 0.6em 1.25em;
     margin-left: 0.35em;
-    box-shadow: 0 4px 14px rgba(147, 195, 199, 0.25);
+    box-shadow: 0 4px 14px rgba(31, 122, 115, 0.35);
 }
 
 #header nav ul li a.nav-cta-btn:hover {
     background: var(--accent-teal-hover);
+    color: #ffffff !important;
     transform: translateY(-1px);
 }
 
