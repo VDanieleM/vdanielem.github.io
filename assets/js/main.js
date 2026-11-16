@@ -1,3 +1,7 @@
+/*
+	Big Picture by HTML5 UP (Refactored for Daniele Maiellaro Portfolio)
+*/
+
 (function($) {
 
 	var	$window = $(window),
@@ -85,7 +89,6 @@
 		var tabs = Array.prototype.slice.call(document.querySelectorAll('.carousel-tab'));
 		var dots = Array.prototype.slice.call(document.querySelectorAll('.carousel-dot'));
 		var headerLinks = Array.prototype.slice.call(document.querySelectorAll('#header nav a[data-carousel-target]'));
-		var mobileSlideLinks = Array.prototype.slice.call(document.querySelectorAll('#mobile-bottom-nav a[data-carousel-target]'));
 		var prevBtn = document.querySelector('.carousel-arrow.prev');
 		var nextBtn = document.querySelector('.carousel-arrow.next');
 		var currentIndex = 0;
