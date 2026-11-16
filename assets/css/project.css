@@ -2,6 +2,10 @@
    PAGE SINGLE PROJECT — LAYOUT FOCUS DINAMICO & FROSTED GLASS
    ========================================================================== */
 
+html {
+    scroll-snap-type: none !important;
+}
+
 /* Spaziatura e struttura della pagina */
 #project-detail {
     background-color: #16191b;
