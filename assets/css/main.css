@@ -442,6 +442,14 @@ body.is-preload:before {
 			z-index: 100000;
 		}
 
+body:not(.is-preload):before,
+body:not(.is-preload):after {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+}
+
 	@media (-webkit-min-device-pixel-ratio: 2) {
 
 		body:before {
@@ -2147,9 +2155,10 @@ a.button.down {
     --bg-dark-elevated: #161c20;
     --bg-card-glass: rgba(24, 31, 36, 0.78);
     --border-subtle: rgba(255, 255, 255, 0.1);
-    --border-accent: rgba(147, 195, 199, 0.55);
-    --accent-teal: #93c3c7;
-    --accent-teal-hover: #abd4d7;
+    --border-accent: rgba(31, 122, 115, 0.55);
+    --accent-teal: #1F7A73;
+    --accent-teal-hover: #28968E;
+    --accent-teal-light: #4db8ae;
     --text-primary: #ffffff;
     --text-secondary: rgba(255, 255, 255, 0.78);
     --text-muted: rgba(255, 255, 255, 0.52);
@@ -2157,14 +2166,20 @@ a.button.down {
 
 /* 1. Sfondo Dark Studio Monolitico & Pulito (Rimozione immagini multiple) */
 body,
-#intro,
-#one,
-#two,
 .main.style3.primary,
 .main.style3.secondary {
     background-color: var(--bg-dark-studio) !important;
     background-image: none !important;
     color: var(--text-primary);
+}
+
+#intro,
+#one,
+#two,
+.carousel-slide {
+    background: transparent !important;
+    background-color: transparent !important;
+    background-image: none !important;
 }
 
 body {
@@ -2173,6 +2188,27 @@ body {
         radial-gradient(circle at 85% 60%, rgba(147, 195, 199, 0.06) 0%, transparent 50%),
         var(--bg-dark-studio) !important;
     background-attachment: fixed !important;
+}
+
+/* Scroll Magnetico tra le sezioni (Desktop & Mobile) */
+html {
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+    scroll-padding-top: 3.5em;
+}
+
+#hero-carousel,
+#work,
+#contact,
+#footer {
+    scroll-snap-align: start;
+    scroll-snap-stop: normal;
+}
+
+@media screen and (max-width: 736px) {
+    html {
+        scroll-padding-top: 3em;
+    }
 }
 
 /* 2. Header Fisso con CTA in Evidenza */
@@ -2303,13 +2339,13 @@ body {
 
 .carousel-tab.active {
     background: var(--accent-teal) !important;
-    color: #0f1316 !important;
+    color: #ffffff !important;
     font-weight: 700;
 }
 
 .carousel-tab.active .tab-num {
-    color: #0f1316;
-    opacity: 0.85;
+    color: #ffffff;
+    opacity: 0.9;
 }
 
 /* Wrapper Viewport + Frecce */
@@ -2416,16 +2452,17 @@ body {
 
 .hero-btn-primary {
     background: var(--accent-teal) !important;
-    color: #0f1316 !important;
+    color: #ffffff !important;
     border: 2px solid var(--accent-teal) !important;
-    box-shadow: 0 8px 24px rgba(147, 195, 199, 0.25);
+    box-shadow: 0 8px 24px rgba(31, 122, 115, 0.35);
 }
 
 .hero-btn-primary:hover {
     background: var(--accent-teal-hover) !important;
     border-color: var(--accent-teal-hover) !important;
+    color: #ffffff !important;
     transform: translateY(-2px);
-    box-shadow: 0 12px 28px rgba(147, 195, 199, 0.35);
+    box-shadow: 0 12px 28px rgba(40, 150, 142, 0.45);
 }
 
 .hero-btn-secondary {
@@ -2904,8 +2941,7 @@ body {
     #contact .box.contact-wrapper {
         padding: 1.5rem 1.15rem;
     }
-
-    /* Attivazione Bottom Bar Mobile Sempre Visibile */
+/* Attivazione Bottom Bar Mobile Sempre Visibile */
     #mobile-bottom-nav {
         display: flex;
         position: fixed;
@@ -2916,12 +2952,12 @@ body {
         background: rgba(12, 16, 19, 0.94);
         backdrop-filter: blur(16px);
         -webkit-backdrop-filter: blur(16px);
-        border-top: 1px solid rgba(147, 195, 199, 0.22);
+        border-top: 1px solid rgba(31, 122, 115, 0.3);
         box-shadow: 0 -6px 24px rgba(0, 0, 0, 0.45);
         z-index: 10002;
         justify-content: space-around;
         align-items: center;
-        padding: 0 0.35rem env(safe-area-inset-bottom, 0);
+        padding: 0.35rem 0.35rem calc(0.35rem + env(safe-area-inset-bottom, 0px));
     }
 
     .mobile-nav-item {
@@ -2929,31 +2965,41 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
-        gap: 0.25rem;
+        justify-content: flex-end; /* Fa scendere tutte le icone e i testi sulla stessa linea di base in basso */
+        gap: 2px; /* Icona e testo molto più vicini */
         color: var(--text-secondary);
         text-decoration: none;
         font-size: 0.68rem;
+        line-height: 1.1;
         font-weight: 600;
-        height: 100%;
+        height: 3.1rem; /* Altezza identica per tutti gli item così la baseline coincide */
+        padding-bottom: 0.4rem;
         transition: color 0.2s ease, transform 0.2s ease;
     }
 
     .mobile-nav-item i.icon {
-        font-size: 1.1rem;
+        font-size: 1.05rem;
+        line-height: 1;
+        margin: 0;
+        display: block;
+    }
+
+    .mobile-nav-item span {
+        line-height: 1;
+        display: block;
     }
 
     .mobile-nav-item.active {
-        color: var(--accent-teal);
+        color: var(--accent-teal-light, #4db8ae);
     }
 
     .mobile-nav-item.cta-highlight {
-        color: #0f1316 !important;
+        color: #ffffff !important;
         background: var(--accent-teal);
-        height: 2.85rem;
+        height: 3.1rem;
         border-radius: 999px;
-        margin: 0 0.25rem;
-        padding: 0 0.5rem;
+        margin: 0 0.2rem;
+        padding: 0 0.5rem 0.4rem 0.5rem;
         font-weight: 700;
+        box-shadow: 0 4px 12px rgba(31, 122, 115, 0.35);
     }
-}
