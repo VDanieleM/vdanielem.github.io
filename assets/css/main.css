@@ -2684,8 +2684,13 @@ html {
 
 .project-card:hover .project-card-cta {
     background: var(--accent-teal);
-    color: #0f1316;
+    color: #ffffff !important;
     border-color: var(--accent-teal);
+}
+
+.project-card:hover .project-card-cta i.icon {
+    color: #ffffff !important;
+    transform: translateX(3px);
 }
 
 .project-card-cta i.icon {
