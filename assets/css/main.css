@@ -2190,17 +2190,16 @@ body {
     background-attachment: fixed !important;
 }
 
-/* Scroll Magnetico tra le sezioni (Desktop & Mobile) */
+/* Scroll Magnetico tra le sezioni */
 html {
-    scroll-snap-type: y mandatory;
+    scroll-snap-type: y proximity;
     scroll-behavior: smooth;
     scroll-padding-top: 3.5em;
 }
 
 #hero-carousel,
 #work,
-#contact,
-#footer {
+#contact {
     scroll-snap-align: start;
     scroll-snap-stop: normal;
 }
