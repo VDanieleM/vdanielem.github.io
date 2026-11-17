@@ -174,11 +174,11 @@
 				}
 			}, 60);
 		});
-
-		// Sincronizzazione stato attivo della Bottom Bar Mobile durante lo scroll verticale
+// Sincronizzazione stato attivo della Bottom Bar Mobile e Top Nav Desktop durante lo scroll verticale
 		var workSection = document.getElementById('work');
 		var contactSection = document.getElementById('contact');
 		var allMobileItems = Array.prototype.slice.call(document.querySelectorAll('#mobile-bottom-nav .mobile-nav-item'));
+		var allDesktopItems = Array.prototype.slice.call(document.querySelectorAll('#header nav ul li a'));
 
 		window.addEventListener('scroll', function() {
 			var scrollPos = window.scrollY + window.innerHeight * 0.35;
@@ -187,17 +187,26 @@
 				allMobileItems.forEach(function(item) {
 					item.classList.toggle('active', item.getAttribute('href') === '#contact');
 				});
+				allDesktopItems.forEach(function(item) {
+					item.classList.toggle('active-slide-link', item.getAttribute('href') === '#contact');
+				});
 			} else if (workSection && scrollPos >= workSection.offsetTop) {
 				allMobileItems.forEach(function(item) {
 					item.classList.toggle('active', item.getAttribute('href') === '#work');
+				});
+				allDesktopItems.forEach(function(item) {
+					item.classList.toggle('active-slide-link', item.getAttribute('href') === '#work');
 				});
 			} else {
 				allMobileItems.forEach(function(item) {
 					var targetAttr = item.getAttribute('data-carousel-target');
 					item.classList.toggle('active', targetAttr !== null && parseInt(targetAttr, 10) === currentIndex);
 				});
+				allDesktopItems.forEach(function(item) {
+					var targetAttr = item.getAttribute('data-carousel-target');
+					item.classList.toggle('active-slide-link', targetAttr !== null && parseInt(targetAttr, 10) === currentIndex);
+				});
 			}
 		});
-	});
 
 })(jQuery);
