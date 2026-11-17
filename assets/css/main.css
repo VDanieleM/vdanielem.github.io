@@ -2203,6 +2203,9 @@ html {
     scroll-snap-align: start;
     scroll-snap-stop: normal;
 }
+#footer {
+    scroll-snap-align: end;
+}
 
 @media screen and (max-width: 736px) {
     html {
