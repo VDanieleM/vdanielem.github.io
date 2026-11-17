@@ -2209,6 +2209,7 @@ html {
 
 @media screen and (max-width: 736px) {
     html {
+        scroll-snap-type: none !important;
         scroll-padding-top: 3em;
     }
 }
