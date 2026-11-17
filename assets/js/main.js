@@ -64,10 +64,6 @@
 			$body.addClass('is-resizing');
 			clearTimeout(resizeTimeout);
 			resizeTimeout = setTimeout(function() {
-				$('a[href^="#"]:not([data-carousel-target])').scrolly({
-					speed: 900,
-					offset: $header.outerHeight() - 1
-				});
 				setTimeout(function() {
 					$body.removeClass('is-resizing');
 					$window.trigger('scroll');
